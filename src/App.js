@@ -37,7 +37,9 @@ function App() {
         </div>
         <Switch>
           <Route exact path="/">
-            <h1>HOME</h1>
+
+            {!localStorage.access_token ? (<h1>HOME</h1>) : ''}
+
           </Route>
           <Route path="/employees">
             <Employee />
